@@ -1,0 +1,174 @@
+DEBUG - 2025-08-08 23:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-08 23:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-08 23:45:05 --> mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction in C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_UPDATE_...', 0)
+#1 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_...')
+#2 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_...')
+#3 C:\xampp2\htdocs\APIS\app\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_...', Array)
+#4 C:\xampp2\htdocs\APIS\app\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+#5 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+#6 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+#7 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\APIS\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp2\htdocs\APIS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp2\htdocs\APIS\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-08 23:45:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Lock wait timeout exceeded; try restarting transaction
+[Method: PUT, Route: api/usuarios/28]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 2 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-08 23:45:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Lock wait timeout exceeded; try restarting transaction
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$YswHzr1du6lW.NK7Lmh3EOaEkSemDfi0GzHBNjGBOBohXebfV.2QG\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$YswHzr1du6lW.NK7Lmh3EOaEkSemDfi0GzHBNjGBOBohXebfV.2QG\')')
+ 3 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 4 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-08 23:45:05 --> [Caused by] mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$YswHzr1du6lW.NK7Lmh3EOaEkSemDfi0GzHBNjGBOBohXebfV.2QG\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$YswHzr1du6lW.NK7Lmh3EOaEkSemDfi0GzHBNjGBOBohXebfV.2QG\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$YswHzr1du6lW.NK7Lmh3EOaEkSemDfi0GzHBNjGBOBohXebfV.2QG\')')
+ 4 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 5 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-08 23:45:30 --> mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction in C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_UPDATE_...', 0)
+#1 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_...')
+#2 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_...')
+#3 C:\xampp2\htdocs\APIS\app\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_...', Array)
+#4 C:\xampp2\htdocs\APIS\app\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+#5 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+#6 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+#7 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\APIS\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp2\htdocs\APIS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp2\htdocs\APIS\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-08 23:45:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Lock wait timeout exceeded; try restarting transaction
+[Method: PUT, Route: api/usuarios/28]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 2 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-08 23:45:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Lock wait timeout exceeded; try restarting transaction
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$K.IE4arYD6UtomB2sIWpu.VV0T1j29L4EdQgiYK3k2nciJqIHRQdi\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$K.IE4arYD6UtomB2sIWpu.VV0T1j29L4EdQgiYK3k2nciJqIHRQdi\')')
+ 3 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 4 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-08 23:45:30 --> [Caused by] mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$K.IE4arYD6UtomB2sIWpu.VV0T1j29L4EdQgiYK3k2nciJqIHRQdi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$K.IE4arYD6UtomB2sIWpu.VV0T1j29L4EdQgiYK3k2nciJqIHRQdi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$K.IE4arYD6UtomB2sIWpu.VV0T1j29L4EdQgiYK3k2nciJqIHRQdi\')')
+ 4 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 5 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-08 23:46:17 --> mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction in C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_UPDATE_...', 0)
+#1 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_...')
+#2 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_...')
+#3 C:\xampp2\htdocs\APIS\app\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_...', Array)
+#4 C:\xampp2\htdocs\APIS\app\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+#5 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+#6 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+#7 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\APIS\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp2\htdocs\APIS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp2\htdocs\APIS\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-08-08 23:46:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Lock wait timeout exceeded; try restarting transaction
+[Method: PUT, Route: api/usuarios/28]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 2 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-08 23:46:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Lock wait timeout exceeded; try restarting transaction
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$r1Dq/L08BIjsi1b8eEx4w.JvkjbBbqvSBXGpG1BQmJenWi3IvRDYq\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$r1Dq/L08BIjsi1b8eEx4w.JvkjbBbqvSBXGpG1BQmJenWi3IvRDYq\')')
+ 3 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 4 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-08 23:46:17 --> [Caused by] mysqli_sql_exception: Lock wait timeout exceeded; try restarting transaction
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$r1Dq/L08BIjsi1b8eEx4w.JvkjbBbqvSBXGpG1BQmJenWi3IvRDYq\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$r1Dq/L08BIjsi1b8eEx4w.JvkjbBbqvSBXGpG1BQmJenWi3IvRDYq\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_UPDATE_USUARIO(\'28\', \'AlexModificado\', \'$2y$10$r1Dq/L08BIjsi1b8eEx4w.JvkjbBbqvSBXGpG1BQmJenWi3IvRDYq\')')
+ 4 APPPATH\Models\ModelUpdate.php(17): CodeIgniter\Database\BaseConnection->query('CALL SP_UPDATE_USUARIO(?, ?, ?)', [...])
+ 5 APPPATH\Controllers\ApiController.php(26): App\Models\ModelUpdate->actualizarUsuario('28', 'AlexModificado', 'nuevo123')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiController->actualizar('28')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

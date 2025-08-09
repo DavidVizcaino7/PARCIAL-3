@@ -1,0 +1,42 @@
+DEBUG - 2025-08-09 01:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-09 01:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-08-09 01:55:10 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE new_db1.SP_INSERT_USUARIO; expected 2, got 5 in C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_INSERT_...', 0)
+#1 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_INSERT_...')
+#2 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_INSERT_...')
+#3 C:\xampp2\htdocs\APIS\app\Models\ApiSelect.php(26): CodeIgniter\Database\BaseConnection->query('CALL SP_INSERT_...', Array)
+#4 C:\xampp2\htdocs\APIS\app\Controllers\ApiController.php(39): App\Models\ApiSelect->postUsuario('nuevoUsuario', NULL, '$2y$10$Lt0C3r5C...', NULL, NULL)
+#5 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(933): App\Controllers\ApiController->create()
+#6 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+#7 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\APIS\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp2\htdocs\APIS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp2\htdocs\APIS\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-08-09 01:56:13 --> mysqli_sql_exception: Incorrect number of arguments for PROCEDURE new_db1.SP_INSERT_USUARIO; expected 2, got 5 in C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp2\htdocs\APIS\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL SP_INSERT_...', 0)
+#1 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CALL SP_INSERT_...')
+#2 C:\xampp2\htdocs\APIS\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CALL SP_INSERT_...')
+#3 C:\xampp2\htdocs\APIS\app\Models\ApiSelect.php(26): CodeIgniter\Database\BaseConnection->query('CALL SP_INSERT_...', Array)
+#4 C:\xampp2\htdocs\APIS\app\Controllers\ApiController.php(39): App\Models\ApiSelect->postUsuario('nuevoUsuario1', NULL, '$2y$10$tcMy6a/1...', NULL, NULL)
+#5 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(933): App\Controllers\ApiController->create()
+#6 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiController))
+#7 C:\xampp2\htdocs\APIS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp2\htdocs\APIS\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp2\htdocs\APIS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp2\htdocs\APIS\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2025-08-09 02:46:57 --> No se eliminó ningún registro para ID 34
+DEBUG - 2025-08-09 02:46:57 --> Valor de $eliminado en delete: true
+DEBUG - 2025-08-09 02:48:58 --> No se eliminó ningún registro para ID 33
+DEBUG - 2025-08-09 02:48:58 --> Valor de $eliminado en delete: true
+DEBUG - 2025-08-09 02:51:32 --> No se eliminó ningún registro para ID 31
+DEBUG - 2025-08-09 02:51:32 --> Valor de $eliminado en delete: true
+DEBUG - 2025-08-09 02:51:40 --> No se eliminó ningún registro para ID 32
+DEBUG - 2025-08-09 02:51:40 --> Valor de $eliminado en delete: true
+DEBUG - 2025-08-09 02:53:10 --> No se eliminó ningún registro para ID 27
+DEBUG - 2025-08-09 02:53:10 --> Valor de $eliminado en delete: true
+DEBUG - 2025-08-09 03:02:14 --> No se eliminó ningún registro para ID 37
+DEBUG - 2025-08-09 03:02:14 --> Valor de $eliminado en delete: true
